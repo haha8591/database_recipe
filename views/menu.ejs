@@ -1,0 +1,68 @@
+<%- include('layout/header') %>
+<div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading">Menu</h6>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<div class="wrapper row3">
+    <main class="hoc container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="content"> 
+    <% if(message){ %>
+        <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+            <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong><%= message.message %> </strong>
+        </div>
+        <% } %>
+            <div>
+                <% if (recipe != ''){%>
+                    <table class="table text-center">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>Image</th>
+                                <th>Cake name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Star</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% recipe.forEach((row,index)=>{%>
+                                <td><a href="/<%= row.website %>"><img src="<%= row.image %>" class="img-thumbnail"></a></td>
+                                <td style="vertical-align:middle">
+                                    <%= row.cake_name %>
+                                </td>
+                                <td style="vertical-align:middle">
+                                    <%= row.category %>
+                                </td>
+                                <td style="vertical-align:middle">
+                                    $<%= row.price %>
+                                </td>
+                                <td  width="60" style="vertical-align:middle">
+                                    <%= row.star %><img src="images/star.ico">
+                                </td>
+                                <td style="vertical-align:middle">
+                                    <%= row.discription %>
+                                </td>
+                                </tr>
+                                <%})%>
+                        </tbody>
+                    </table>
+                    <% }else{ %>
+                        <h1 class="text-center text-secondary mt-S">No recipe found</h1>
+                        <% } %>
+            </div>
+            <div class="clear"></div>
+        </main>
+      </div>
+            <%- include('layout/footer') %>

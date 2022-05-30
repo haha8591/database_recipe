@@ -1,0 +1,70 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading"> Edit order
+                <%= order.payment %>
+            </h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+            <!-- ##################################S############################################################## -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <!-- End Top Background Image Wrapper -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <!-- ################################################################################################ -->
+                <h1>&lt;h1&gt; to &lt;h6&gt; - Headline Colour and Size Are All The Same</h1>
+                <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt="">
+                <p>Aliquatjusto quisque nam consequat doloreet vest orna partur scetur portortis nam. Metadipiscing eget facilis elit sagittis felisi eger id justo maurisus convallicitur.</p>
+                <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
+                <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt="">
+                <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more website templates visit our <a href="https://www.os-templates.com/">free website templates</a>                    section.</p>
+                <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+                <h1>edit order</h1>
+                <form action="/updateo/<%=order._id%>" method="POST" id="add-form" enctype="multipart/form-data">
+                    <div class="scrollable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th>
+                                    <th>Header 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><label for="product">product</label></td>
+                                    <td><input type="text" name="product" value="<%= order.product %>" /></td>
+                                    <td><label for="payment">payment</label></td>
+                                    <td><input type="text" name="payment" placeholder="Enter cash or card" value="<%= order.payment %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="remark">remark</label></td>
+                                    <td><input type="text" name="remark" placeholder="Enter remark" value="<%= order.remark %>" /></td>
+                                    <td><input type="submit" name="submit" value="Update order" class="btn btn-success btn-lg" /></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+                <!-- ################################################################################################ -->
+            </div>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>

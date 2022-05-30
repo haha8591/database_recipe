@@ -1,0 +1,202 @@
+<%- include('layout/header') %>
+  <!-- ################################################################################################ -->
+  <div class="overlay">
+    <div id="pageintro" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <article>
+        <h3 class="heading">The Cake Shop</h3>
+        <p>Cooking</p></br>
+        <p>Testing</p></br>
+        <p>Living</p>
+        <footer><a class="btn" href="/menu">Go To Menu</a></footer>
+      </article>
+
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <ul class="nospace group btmspace-80">
+        <% recipe.forEach((row,index)=>{%>
+        <li class="one_quarter ">
+          <figure><a class="imgover" href="/<%= row.website %>"><img src="<%= row.image %>" alt=""></a>
+            <figcaption>
+              <h6 class="heading">Top 3 Cake</h6>
+              <div>
+                <p><%= row.cake_name %></p>
+                <p><%= row.website %></p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <%})%>
+      </ul>  
+    </section>
+    <!-- ################################################################################################ -->
+    <hr class="btmspace-80">
+    <!-- ################################################################################################ -->
+    <section class="group">
+      <div class="one_half first"><img class="inspace-15 borderedbox" src="images/chef.jpg" alt="" width="60%"></div>
+      <div class="one_half">
+        <ul class="nospace group inspace-15">
+          <li class="one_half first btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Posuere ultricies</a></h6>
+              <p class="nospace">
+                She is the chef, founder, owner, and CEO of Milk Bar, the sister bakery to the Momofuku restaurant group, with seventeen locations across North America. 
+              </p>
+            </article>
+          </li>
+          <li class="one_half btmspace-50">
+            <article>
+              <h6 class="heading"><a href="#">Pellentesque ipsum</a></h6>
+              <p class="nospace">She is influential in the culinary industry, and was featured on Food & Wine magazine's list of "Most Innovative Women in Food and Drink" in 2014.
+              </p>
+            </article>
+          </li>
+          <li class="one_half first">
+            <article>
+              <h6 class="heading"><a href="#">Risus auctor vel</a></h6>
+              <p class="nospace">Outside of her cooking career, she is the author of four cookbooks: Momofuku Milk Bar, Milk Bar Life, All About Cake, and Milk Bar: Kids Only.</p>
+            </article>
+          </li>
+          <li class="one_half">
+            <article>
+              <h6 class="heading"><a href="#">Volutpat vitae</a></h6>
+              <p class="nospace">Since 2014, she has starred sporadically as a judge on the competitive reality series MasterChef, and has made several appearances on television.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+<div class="bgded overlay" style="background-image: url('images/demo/backgrounds/01.png');">
+  <figure class="hoc container clear imgroup"> 
+    <!-- ################################################################################################ -->
+    <figcaption class="sectiontitle">
+      <p class="nospace font-xs">See our other products...</p>
+      <p class="heading underline font-x2">Newest Cakes</p>
+    </figcaption>
+    <ul class="nospace group">
+      <li class="one_third"><a class="imgover" href="/Caramel"><img src="images/Caramel Popcorn Cake.jpg" alt=""></a></li>
+      <li class="one_third"><a class="imgover" href="/Matcha"><img src="images/Matcha Cake.jpg" alt=""></a></li>
+      <li class="one_third"><a class="imgover" href="/Cake"><img src="images/Cake Shop Bites.jpg" alt=""></a></li>
+      <li class="one_third"><a class="imgover" href="/Crown"><img src="images/Crown Pastry.jpg" alt=""></a></li>
+      <li class="one_third"><a class="imgover" href="/Fresh"><img src="images/Fresh Fruit Tart.jpg" alt=""></a></li>
+      <li class="one_third"><a class="imgover" href="/Lotus"><img src="images/Lotus Cake.jpg" alt=""></a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </figure>
+  <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+  <figure class="hoc container clear clients"> 
+    <!-- ################################################################################################ -->
+    <figcaption class="sectiontitle">
+      <p class="nospace font-xs">Sculpture Cakes</p>
+      <p class="heading underline font-x2">Fondant Cakes❤❤❤</p>
+    </figcaption>
+    <ul class="nospace group">
+      <li class="one_quarter first"><a class="imgover" href="#"><img src="images/Batman Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="#"><img src="images/L V Logo Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="#"><img src="images/Superman Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="#"><img src="images/Makeup and Camera Cake.jpg" alt=""></a></li>
+      <li class="one_quarter first"><a class="imgover" href="#"><img src="images/Spiderman Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="/Lego"><img src="images/Lego Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="#"><img src="images/Doritos Chips Cake.jpg" alt=""></a></li>
+      <li class="one_quarter"><a class="imgover" href="/Donuts"><img src="images/Donuts Cake.jpg" alt=""></a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </figure>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+  <section id="testimonials" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs"> Advanced Database System Class</p>
+      <p class="heading underline font-x2">Final Project</p>
+    </div>
+    <article class="btmspace-80">
+      <blockquote>Hello everyone!This website is only used for displaying our final project of Advanced Database System Class.
+        If you have any further question, please feel free to contact us.Hope you enjoy this website.</blockquote>
+      <figure class="clear"><img src="images/favicon.ico" alt="">
+        <figcaption>
+          <h6 class="heading">侑珊&欣渝</h6>
+          <em>Author</em></figcaption>
+      </figure>
+    </article>
+    <footer class="center"><a class="btn" href="mailto:00657041@mail.ntou.edu.tw">Contact Us</a></footer>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <!-- <section class="hoc container clear"> 
+    <div class="sectiontitle">
+      <p class="nospace font-xs">Felis dictum viverra mauris dui</p>
+      <p class="heading underline font-x2">Phasellus nunc erat cursus</p>
+    </div>
+    <ul id="latest" class="nospace group">
+      <li class="one_third first">
+        <article><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="#">Comments (10)</a></li>
+          </ul>
+          <div class="excerpt clear">
+            <h6 class="heading">Aliquet tincidunt vel vulputate egestas leo</h6>
+            <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
+            <p>Integer id justo ut diam suscipit laoreet quisque bibendum dolor at ultricies vestibulum risus&hellip;</p>
+          </div>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="#">Comments (10)</a></li>
+          </ul>
+          <div class="excerpt clear">
+            <h6 class="heading">Dui eleifend elit ac ullamcorper libero tellus</h6>
+            <time datetime="2045-04-04T08:15+00:00"><strong>04</strong> <em>Apr</em></time>
+            <p>Vel turpis quisque blandit metus ut tellus in mauris vivamus faucibus vivamus egestas lobortis&hellip;</p>
+          </div>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a class="imgover" href="#"><img src="images/demo/348x261.png" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="#">Comments (10)</a></li>
+          </ul>
+          <div class="excerpt clear">
+            <h6 class="heading">Odio curabitur id neque sed urna facilisis blandit</h6>
+            <time datetime="2045-04-03T08:15+00:00"><strong>03</strong> <em>Apr</em></time>
+            <p>Donec quis metus vel tortor porttitor pretium cras at justo nullam at lacus id metus pulvinar&hellip;</p>
+          </div>
+          <footer><a class="btn" href="#">Read More</a></footer>
+        </article>
+      </li>
+    </ul>
+  </section>
+  <%- include('layout/footer') %>

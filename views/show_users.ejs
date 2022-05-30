@@ -1,0 +1,75 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading">Menu</h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <% if(message){ %>
+                    <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <strong><%= message.message %> </strong>
+                    </div>
+                    <% } %>
+                        <div class="table-responsive">
+                            <% if (customer != ''){%>
+                                <table class="table table-striped text-center">
+                                    <thead>
+                                        <tr class="table-dark">
+                                            <th>name</th>
+                                            <th>VIP</th>
+                                            <th>age</th>
+                                            <th>contact_obj</th>
+                                            <th>gender</th>
+                                            <th>account</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% customer.forEach((row,index)=>{%>
+                                            <td>
+                                                <%= row.name %>
+                                            </td>
+                                            <td>
+                                                <%= row.vip %>
+                                            </td>
+                                            <td>
+                                                <%= row.age %>
+                                            </td>
+                                            <td>
+                                                mobile:
+                                                <%= row.contact_obj[0].mobile %><br> telephone:
+                                                    <%= row.contact_obj[0].telephone %><br> e-mail:
+                                                        <%= row.contact_obj[0].email %>
+                                            </td>
+                                            <td>
+                                                <%= row.gender %>
+                                            </td>
+                                            <td>
+                                                <%= row.account %>
+                                            </td>
+                                            <td>
+                                                <a href="/edits<%=row._id%>" class="text-success"><i class="fas fa-edit da-lj mx-1"></i></a>
+                                                <a href="/deletes/<%=row._id%>" class="text-danger"><i class="fas fa-trash da-lj mx-1"></i></a>
+                                            </td>
+                                            </tr>
+                                            <%})%>
+                                    </tbody>
+                                </table>
+                                <% }else{ %>
+                                    <h1 class="text-center text-secondary mt-S">No Customer found</h1>
+                                    <% } %>
+                        </div>
+                        <%- include('layout/footer') %>

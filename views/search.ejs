@@ -1,0 +1,74 @@
+<%- include('layout/header') %>
+<div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <h6 class="heading"> Welcome to Join us!</h6>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Add recipe</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<div class="wrapper row3">
+    <main class="hoc container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="content"> 
+        <!-- ################################################################################################ -->
+        <h1>Search your favor:)</h1>
+        <!-- <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt=""> -->
+        <p>Please input all the cake's information,and press down the "Add!" button.</p>
+        <!-- <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt=""> -->
+        <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+        <h1>Add Customer</h1>
+        <form action="/result" method="POST" id="add-form" enctype="multipart/form-data">
+          <div class="one_third first">
+            <label for="name">Cake Name</label>
+            <input type="text" name="cake_name_search" id = "cake_name" placeholder="Enter cake name"  /></td>
+          </div>
+          <div class="one_third">
+            <label for="price">Price Upper bound</label>
+            <input type="number" name="price_upper" placeholder="Enter price"  size="22">
+          </div>
+          <div class="one_third">
+            <label for="price">Price Lower bound</label>
+            <input type="number" name="price_lower" placeholder="Enter price"  size="22" >
+          </div>
+          <div class="one_third first" style="margin-top: 20px;">
+            <label for="url">Star Upper bound</label>
+            <input type="number" name="star_upper" placeholder="Enter star" size="22"  />
+          </div>
+          <div class="one_third" style="margin-top: 20px;">
+            <label for="url">Star Lower bound</label>
+            <input type="number" name="star_lower" placeholder="Enter star" size="22" />
+          </div>
+          <div class="one_third" style="margin-top: 20px;">
+            <label for="url">Category</label>
+            <select name="category_search" class="select-css">
+              <option></option>
+              <option>cake</option>
+              <option>cookie</option>
+              <option>bite</option>
+              <option>fondant</option>
+              <option>bread</option>
+              <option>cupcake</option>
+          </select><br />
+          </div>    
+          <div class="one_third first" style="margin-top: 20px;">
+            <input type="submit" name="submit" value="Add Cake"  />
+            </br>
+            <input type="reset" name="reset" value="Reset information"/>
+          </div>
+         </form>
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+<%- include('layout/footer') %>

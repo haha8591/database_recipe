@@ -1,0 +1,75 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading">Edit Recipe</h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Edit Recipe</a></li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <% if(message){ %>
+                    <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <strong><%= message.message %> </strong>
+                    </div>
+                    <% } %>
+                        <div class="table-responsive">
+                            <% if (recipe != ''){%>
+                                <table class="table table-striped text-center">
+                                    <thead>
+                                        <tr class="table-dark">
+                                            <th>Image</th>
+                                            <th>Cake name</th>
+                                            <th>Price</th>
+                                            <th>Star</th>
+                                            <th>Description</th>
+                                            <th>Category</th>
+                                            <!--<th>count</th>-->
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% recipe.forEach((row,index)=>{%>
+                                            <td>
+                                                <img src="<%= row.image %>" class="img-thumbnail">
+                                            </td>
+                                            <td>
+                                                <%= row.cake_name %>
+                                            </td>
+                                            <td>
+                                                <%= row.price %>
+
+                                            </td>
+                                            <td>
+                                                <%= row.star %>
+                                            </td>
+                                            <td>
+                                                <%= row.discription %>
+                                            </td>
+
+                                            <td>
+                                                <%= row.category %>
+                                            </td>
+
+                                            <td>
+                                                <a href="/edit<%=row._id%>" class="text-success"><i class="fas fa-edit da-lj mx-1"></i></a>
+                                                <a href="/delete/<%=row._id%>" class="text-danger"><i class="fas fa-trash da-lj mx-1"></i></a>
+                                            </td>
+                                            </tr>
+                                            <%})%>
+                                    </tbody>
+                                </table>
+                                <% }else{ %>
+                                    <h1 class="text-center text-secondary mt-S">No Recipe found</h1>
+                                    <% } %>
+                        </div>

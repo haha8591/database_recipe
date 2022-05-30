@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+Template Name: Nocobot
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html>
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><i class="fas fa-phone rgtspace-5"></i> +866 (02) 1234 - 5678</li>
+        <li><i class="far fa-envelope rgtspace-5"></i> 00657041@mail.ntou.edu.tw & 00657028@mail.ntou.edu.tw</li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+    <div class="fl_right"> 
+      <!-- ################################################################################################ -->
+      <ul class="nospace">
+        <li><a href="#" title="Login"><i class="fas fa-sign-in-alt"></i></a></li>
+        <li><a href="/add" title="Sign Up"><i class="fas fa-edit"></i></a></li>
+        <li id="searchform">
+          <div>
+            <form action="/result" method="post">
+              <fieldset>
+                <legend>Quick Search:</legend>
+                <input type="text" placeholder="Enter search term&hellip;">
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('images/demo/backgrounds/01.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="/">Cake Shop</a></h1>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- Navigation start############################################################################## -->
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a class="drop" href="#">Cake</a>
+            <ul>
+              <li><a href="/add_recipe">Add Recipe</a></li>
+              <li><a href="/show_recipes">Edit Recipe</a></li>
+              <li><a href="/menu">Menu</a></li>
+              <li><a href="/map">Map</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Customer</a>
+            <ul>
+              <li><a href="/add">Add customer</a></li>
+              <li><a href="/show_users">Show all customer</a></li>
+              <!-- <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li> -->
+              <!-- <li><a href="#">Level 2</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Order</a>
+            <ul>
+              <li><a href="/add_order">Add order</a></li>
+              <li><a href="/show_order">Show order</a></li>
+            </ul>
+          </li>
+          <li><a href="#">:)</a></li>
+        </ul>
+        <!-- Navigation end############################################################################ -->
+      </nav>
+    </header>
+  </div>

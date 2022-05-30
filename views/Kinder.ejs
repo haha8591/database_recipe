@@ -1,0 +1,90 @@
+<%- include('layout/header') %>
+<div class="overlay">
+    <div id="breadcrumb" class="hoc clear"> 
+      <% comment.forEach((row,index)=>{%>
+      <!-- ################################################################################################ -->
+      <h6 class="heading"><%= row.inventory_docs[0].cake_name%></h6>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="#"><%= row.inventory_docs[0].cake_name%></a></li>
+      </ul>
+      
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1>Hello! Welcome:)</h1>
+        <img src="<%= row.inventory_docs[0].image%>" style="display:block; margin:auto;"  alt=""></br>
+      <!-- <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt=""> -->
+      <h1>Description</h1>
+      <p><%= row.inventory_docs[0].discription%></p>
+      <h1>Star</h1>
+      <p><%= row.inventory_docs[0].star%></p>
+      <h1>Price</h1>
+      <p>$<%= row.inventory_docs[0].price%></p>
+      
+      <div id="comments">
+        <h2>Comment</h2>
+        <ul>
+          <% for(var i=0; i< row.word.length; i++){ %>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
+                <address>
+                By <a href="mailto:<%= row.word[i].comment_email%>"><%= row.word[i].comment_name%></a>
+                </address>
+                <time><%= row.word[i].date %></time>
+              </header>
+              <div class="comcont">
+                <p><%= row.word[i].comment %></p>
+              </div>
+            </article>
+          </li>
+          <% } %>
+        <%})%>
+        </ul>
+        <h2>Write A Comment</h2>
+        <form action="/add_comment" method="post">
+          <div class="one_third first">
+            <label for="name">Name <span>*</span></label>
+            <input type="hidden" name="cake" id="cake" value="Kinder Cake" size="22" required>
+            <input type="text" name="comment_name" id="comment_name" value="" size="22" required>
+          </div>
+          <div class="one_third">
+            <label for="email">Mail <span>*</span></label>
+            <input type="email" name="comment_email" id="comment_email" value="" size="22" required>
+          </div>
+
+          <div class="block clear">
+            <label for="comment">Your Comment</label>
+            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Submit Form">
+            &nbsp;
+            <input type="reset" name="reset" value="Reset Form">
+          </div>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+<%- include('layout/footer') %>

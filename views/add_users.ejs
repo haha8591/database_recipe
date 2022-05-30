@@ -1,0 +1,85 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading"> Welcome to Join us!</h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <!-- End Top Background Image Wrapper -->
+
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <!-- ################################################################################################ -->
+                <h1>Keep going!</h1>
+                <!-- <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt=""> -->
+                <p>Please input all the customer's information,and press down the "Add!" button.</p>
+                <!-- <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt=""> -->
+                <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                <h1>Add Customer</h1>
+                <form action="/add" method="POST" id="add-form" enctype="multipart/form-data">
+                    <div class="one_third first">
+                        <label for="name">Name <span>*</span></label>
+                        <input type="text" name="name" placeholder="Enter name" size="22" required /></td>
+                    </div>
+                    <div class="one_third">
+                        <label for="email">E-Mail <span>*</span></label>
+                        <input type="email" name="email" placeholder="Enter email" size="22" required>
+                    </div>
+                    <div class="one_third">
+                        <label for="url">Mobile <span>*</span></label>
+                        <input type="text" name="mobile" placeholder="Enter mobile" size="22" required />
+                    </div>
+                    <div class="one_third first">
+                        <label for="name">Telephone <span>*</span></label>
+                        <input type="text" name="telephone" placeholder="Enter tel" size="22" required />
+                    </div>
+                    <div class="one_third">
+                        <label for="age">Age</label>
+                        <input type="number" name="age" placeholder="Enter Age" required />
+                    </div>
+                    <div class="one_third">
+                        <label for="vip">VIP <span>*</span></label>
+                        <input type="text" name="vip" list="vlist" placeholder="Enter true or false" required/>
+                        <datalist id="vlist">
+                          <option value="true">
+                          <option value="false">                
+                        </datalist>
+                    </div>
+                    <div class="one_third first">
+                        <label for="pass">Password <span>*</span></label>
+                        <input type="text" name="pass" placeholder="Enter Password" size="22" required />
+                    </div>
+                    <div class="one_third">
+                        <label for="gender">Gender</label>
+                        <input type="text" list="glist" name="gender" placeholder="female or male" required />
+                        <datalist id="glist">
+                          <option value="male">
+                          <option value="female">                
+                        </datalist>
+                    </div>
+                    <div class="one_third">
+                        <label for="account">Account <span>*</span></label>
+                        <input type="text" name="account" placeholder="Enter Account" required />
+                    </div>
+                    <input type="submit" name="submit" value="Add User" />
+                    <input type="reset" name="reset" value="Reset Form">
+                </form>
+
+                <!-- ################################################################################################ -->
+            </div>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+    <%- include('layout/footer') %>

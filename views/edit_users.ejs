@@ -1,0 +1,89 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading"> Edit</h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Edit</a></li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <!-- End Top Background Image Wrapper -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <!-- ################################################################################################ -->
+                <h1>Edit user</h1>
+                <form action="/updates/<%=customers._id%>" method="POST" id="add-form" enctype="multipart/form-data">
+                    <div class="scrollable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>filed</th>
+                                    <th></th>
+                                    <th>filed</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><label for="name">Name</label></td>
+                                    <td><input type="text" name="name" placeholder="Enter name" value="<%= customers.name %>" /></td>
+                                    <td>
+                                        <label for="gender">Gender</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="gender" list="glist" placeholder="Enter Gender" value="<%= customers.gender %>" />
+                                        <datalist id="glist">
+                                            <option value="female">
+                                            <option value="male">                
+                                          </datalist>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="vip">VIP</label></td>
+                                    <td>
+                                        <input type="text" name="vip" list="tf" value="<%= customers.vip %>" />
+                                        <datalist id="tf">
+                                            <option value="true">
+                                            <option value="false">                
+                                          </datalist>
+                                    </td>
+                                    <td><label for="age">Age</label></td>
+                                    <td><input type="number" name="age" placeholder="Enter Age" value="<%= customers.age %>" /></td>
+                                    <input type="hidden" name="account" value="<%= customers.account %>" />
+                                </tr>
+                                <tr>
+                                    <td><label for="telephone">telephone</label></td>
+                                    <td><input type="text" name="telephone" placeholder="Enter tel" value="<%= customers.contact_obj[0].telephone %>" /></td>
+                                    <td><label for="mobile">mobile</label></td>
+                                    <td><input type="text" name="mobile" placeholder="Enter mobile" value="<%= customers.contact_obj[0].mobile %>" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">email</label></td>
+                                    <td><input type="text" name="email" placeholder="Enter email" value="<%= customers.contact_obj[0].email %>" /></td>
+                                    <td><input type="submit" name="submit" value="Update user" class="btn btn-success btn-lg" /></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+    </main>
+    </div>
+    <%- include('layout/footer') %>

@@ -1,0 +1,83 @@
+<%- include('layout/header') %>
+    <div class="overlay">
+        <div id="breadcrumb" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <h6 class="heading"> Making Money!</h6>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/add_order">Add order</a></li>
+            </ul>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    </div>
+    <!-- End Top Background Image Wrapper -->
+
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="content">
+                <!-- ################################################################################################ -->
+                <h1>Keep going!</h1>
+                <!-- <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt=""> -->
+                <p>Please input all the order's information,and press down the "Add!" button.</p>
+                <!-- <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt=""> -->
+                <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                <h1>Add Order</h1>
+                <form action="/add_order" method="POST" id="add-form" enctype="multipart/form-data">
+                    <div class="one_third first">
+                        <label for="name">order_id <span>*</span></label>
+                        <input type="text" name="order_id" placeholder="Enter order_id" size="22" required /></td>
+                    </div>
+                    <div class="one_third">
+                        <label for="email">sum <span>*</span></label>
+                        <input type="number" name="sum" placeholder="Enter sum" size="22" required>
+                    </div>
+                    <div class="one_third">
+                        <label for="url">account <span>*</span></label>
+                        <input type="text" name="account" placeholder="Enter account" size="22" required />
+                    </div>
+                    <div class="one_third first">
+                        <label for="name">Product name<span>*</span></label>
+                        <input type="text" name="cake" placeholder="Enter cake name" size="22" required /></td>
+                    </div>
+                    <div class="one_third">
+                        <label for="email">Product Price <span>*</span></label>
+                        <input type="number" name="price" placeholder="Enter price" size="22" required>
+                    </div>
+                    <div class="one_third">
+                        <label for="url">Status <span>*</span></label>
+                        <input type="text" name="status" list="tf" placeholder="Enter true or false" size="22" required />
+                        <datalist id="tf">
+                            <option value="true">
+                            <option value="false">                
+                          </datalist>
+                    </div>
+                    <div class="one_third first" style="margin-top: 20px;">
+                        <label for="name">Remarks<span>*</span></label>
+                        <textarea name="remarks" id="comment" cols="25" rows="10"></textarea>
+                    </div>
+                    <div class="one_third" style="margin-top: 20px;">
+                        <label for="url">Payment <span>*</span></label>
+                        <input type="text" name="payment" list="paylist" placeholder="Enter cash or card " size="22" required />
+                        <datalist id="paylist">
+                            <option value="cash">
+                            <option value="card">                
+                          </datalist>
+                    </div>
+                    <div class="one_third" style="margin-top: 50px;">
+                        <input type="submit" name="submit" value="Add order" /></br>
+                        <input type="reset" name="reset" value="Reset Form">
+                    </div>
+                </form>
+
+                <!-- ################################################################################################ -->
+            </div>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+    <%- include('layout/footer') %>
